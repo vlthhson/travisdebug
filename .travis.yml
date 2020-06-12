@@ -15,6 +15,7 @@ notifications:
       template:
         - "Dev %{repository_slug} (%{commit}) : %{message}"
         - "Build details: %{build_url}"
+      if: branch = develop
     - rooms:
         - vietlink:BYz7qT0DazKoaKlu4m74mCXC
       on_success: always
@@ -22,3 +23,4 @@ notifications:
       template:
         - "Master %{repository_slug} (%{commit}) : %{message}"
         - "Build details: %{build_url}"
+      if: branch = master
